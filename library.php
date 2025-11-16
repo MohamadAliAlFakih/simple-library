@@ -145,7 +145,7 @@ echo "<br>";
 // 7-fetching all books to specific author_id
 
 $author_id = 3;
-echo "7- Fetching All books by Author ID $author_id:<br><br>";
+echo "7- Books by Author ID $author_id:<br><br>";
 
 $statement = $mysqli->prepare("
     SELECT title FROM books
@@ -157,7 +157,7 @@ $statement->execute();
 $result = $statement->get_result();
 $row = $result->fetch_assoc();
 while ($row) {
-    echo "{$row['title']}<br>";
+    echo "-{$row['title']}<br>";
     $row = $result->fetch_assoc();
 }
 
