@@ -2,7 +2,7 @@
 
 // 1-connecting
 
-$mysqli = new mysqli("localhost", "root", "7799", "se_factory");
+$mysqli = new mysqli("localhost", "root", "****", "se_factory");
 
 if ($mysqli->connect_error) {
     die("connection error" . $mysqli->connection_error);
